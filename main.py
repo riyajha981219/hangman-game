@@ -23,6 +23,7 @@ class Guess:
         self.word = word
 
     # calculates length of the distinct word (eleminates repetitive letters in the word (just keeps one))
+    # set() function removes all the repetitive letters from the string
     def disLength(self):
         self.original = set(self.word)
         stringElement = len(self.original)
@@ -65,6 +66,8 @@ class Guess:
                 count -= 1
 
             # print the word that you guessed each time
+            # first argument tells the function what to insert after each element, to add nothing put an empty string with no spaces
+            # .join(<list>) gives the list to be converted
             print("\n"+"".join(found)+"\n")
 
             # if there was no _ in found, that means the word was guessed completely and user won!
